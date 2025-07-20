@@ -1,0 +1,5 @@
+app_name: "Go-Fig"
+env: "development"
+debug: true
+port: 8088
+timeout_seconds: 10
