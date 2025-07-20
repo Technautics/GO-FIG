@@ -1,8 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"github.com/Technautics/GO-FIG/app"
+	"github.com/Technautics/GO-FIG/config"
+)
 
 func main() {
 
-	fmt.Println("Starting a new project!")
+	cfg := config.LoadConfig()
+	app.StartApp(cfg)
+
 }
