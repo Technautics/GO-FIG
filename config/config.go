@@ -27,7 +27,7 @@ func LoadConfig() *Config {
 	viper.AddConfigPath(".")
 
 	// Let's explicitly set the port value
-	viper.Set("port", 9090)
+	// viper.Set("port", 9090)
 
 	// Set the default values for fallbacks
 	viper.SetDefault("app_name", "MyApp")
@@ -47,7 +47,7 @@ func LoadConfig() *Config {
 
 	err := viper.ReadInConfig()
 	if err != nil {
-		log.Printf("[WARNING] Could not find the config file %v \n", err)
+		log.Printf("[WARNING]  %v \n", err)
 		fmt.Println("Using default values and/or environment variables")
 	} else {
 		fmt.Println("✅ Config file loaded from :", viper.ConfigFileUsed())
